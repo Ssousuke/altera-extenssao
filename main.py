@@ -1,0 +1,33 @@
+"""
+Script criado com o objetivo de facilitar a alteração do nome / extenssão de inúmeros arquivos
+Author : Wesley Farias
+"""
+import os
+from decouple import config
+
+folder = config(r'FILE_DIR')
+
+
+def rename_files():
+    # local do arquivo
+    for filename in os.listdir(folder):
+        try:
+            # split_file = o nome do arquivo é fatiado e transformado em uma lista dividia pelo "."
+            split_file = f'{filename}'.split('.')
+            # new = a primeira parte do nome
+            new = str(split_file[0])
+            # src = local do arquivo original
+            src = f'{folder}/{filename}'
+            # dst = o local do arquivo com a nova extenssão
+            dst = f'{folder}/{new}.jpg'
+            # os.rename = renomeia os arquivos
+            os.rename(src, dst)
+
+            # mostra o processo de alteração
+            print(f'Anterior: {filename} --->  Novo: {dst}')
+        except Exception as e:
+            print(f'Error: {e}')
+
+
+if __name__ == '__main__':
+    rename_files()
