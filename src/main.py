@@ -5,11 +5,12 @@ Author : Wesley Farias
 import os
 from decouple import config
 
+
+# local do arquivo
 folder = config(r'FILE_DIR')
 
 
 def rename_files():
-    # local do arquivo
     for filename in os.listdir(folder):
         try:
             # split_file = o nome do arquivo é fatiado e transformado em uma lista dividia pelo "."
