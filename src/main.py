@@ -1,7 +1,7 @@
 import os
 
 # local do arquivo
-folder = (r'C:\Users\china\Documents\teste\1 Ano A')
+folder = (r'caminho da pasta')
 
 
 def rename_files():
