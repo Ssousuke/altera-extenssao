@@ -1,9 +1,7 @@
 import os
-from decouple import config
-
 
 # local do arquivo
-folder = (r'#Diretorio')
+folder = (r'C:\Users\china\Documents\teste\1 Ano A')
 
 
 def rename_files():
