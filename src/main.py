@@ -3,7 +3,7 @@ from decouple import config
 
 
 # local do arquivo
-folder = config(r'#Diretorio')
+folder = (r'#Diretorio')
 
 
 def rename_files():
