@@ -1,13 +1,9 @@
-"""
-Script criado com o objetivo de facilitar a alteração do nome / extenssão de inúmeros arquivos
-Author : Wesley Farias
-"""
 import os
 from decouple import config
 
 
 # local do arquivo
-folder = config(r'FILE_DIR')
+folder = config(r'#Diretorio')
 
 
 def rename_files():
